@@ -1,4 +1,9 @@
-from utils.config_loader import load_config
+from utils.model_loader import ModelLoader
 
-config = load_config()
-print(config)
+
+loader = ModelLoader()
+llm = loader.load_llm()
+
+output = llm.invoke("what is capex meaning?")
+
+print(output)
