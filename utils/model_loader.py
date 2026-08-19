@@ -42,9 +42,3 @@ class ModelLoader(BaseModel):
         model_name = self._config["llm"]["openai"]["model"]
         llm = ChatOpenAI(model=model_name, api_key=SecretStr(openai_api_key))
         return llm
-
-
-
-
-
-

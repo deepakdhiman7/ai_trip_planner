@@ -1,9 +1,9 @@
-from utils.model_loader import ModelLoader
+from tools.weather_client import WeatherClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-loader = ModelLoader()
-llm = loader.load_llm()
-
-output = llm.invoke("what is capex meaning?")
-
-print(output)
+client = WeatherClient()
+current_weather = client.get_current_weather("Noida")
+print(current_weather)
